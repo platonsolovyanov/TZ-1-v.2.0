@@ -1,5 +1,5 @@
 import MenuContainer from '../container/MenuContainer';
-export default function Menu() {
+export default function MenuComponent() {
 
     return (
         <MenuContainer />

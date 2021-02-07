@@ -1,5 +1,6 @@
-import { Route } from 'react-router-dom';
-const styles = {
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
     root: {
         width: '0 auto',
         display: 'flex',
@@ -12,13 +13,14 @@ const styles = {
         width: '300px'
 
     }
-}
+});
 
 export default function LoginContainer({ onSubmit, register, handleSubmit }) {
+    const classes = useStyles();
 
     return (
-        <div style={styles.root} onSubmit={handleSubmit(onSubmit)}>
-            <form style={styles.form} action="" className='App'>
+        <div style={classes.root} onSubmit={handleSubmit(onSubmit)}>
+            <form style={classes.form} action="" className='App'>
 
                 <label htmlFor="login">Login:</label>
                 <input ref={register} name="login" />
